@@ -1,0 +1,26 @@
+@mixin color($color1,$color2) {
+    h4,h3,h2{
+        color: $color1 !important;
+    }
+    h5,h6{
+        color: $color2 !important;
+    }
+    button{
+        background-color: $color1 !important ;
+        &:hover{
+            color: $color1 !important;
+            background-color: #eee !important ;
+        }  
+    }
+        a{   
+        &:hover{
+            color: $color1 !important;
+        }  
+}
+}
+.three{
+    @include color($red-color, $light-green-color)
+}
+.two{
+    @include color($green-color, $brown-color)
+}

@@ -1,0 +1,282 @@
+@import"./type_1.scss";
+@import"./_variable.scss";
+@import"./type_2.scss";
+@import"./about.scss";
+@import"./contact.scss";
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@font-face{
+    font-family: "cairo";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body {
+    font-family: "cairo","Cambria, cochin, Georgia, Times, Times New Roman, serif" !important;
+}
+.piazz-barnd{
+    width: 80px;
+    margin-right: 75px;
+}
+.navbar-collapse {
+    margin: 10px;
+}
+.collapse {
+   
+    .navbar-nav{
+        display: contents;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+
+        .nav-link{
+            font-weight: bold;
+            margin-left: 15px;
+            &:hover,
+            &:focus{
+                color: $blue-color !important;
+                border-bottom: 2px solid $blue-color;
+                background-color: $custom-color !important;
+            }
+        }
+    }
+    .active a {
+        color: $blue-color !important;
+        border-bottom: 2px solid $blue-color;
+    }
+}
+
+
+.carosel {
+    .row{
+        display: block !important;
+    }
+    
+    .carousel-item{
+        img{
+            height: 450px;
+        }
+
+        .overlay{
+            position: absolute;
+            background-color: rgba($color: #160124, $alpha: .3);
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            display: flex !important;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            width: 60%;
+            color: rgba(0, 0, 0);
+        }
+        h4{
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: $blue-color;
+        }
+        .btn-carosel{
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px;
+            background-color: $blue-color;
+            color: #eee;
+            margin: 5px;
+            border-radius: 8px;
+            &:hover,
+            &:focus{
+                background-color: #eee;
+                color: $blue-color;
+            }
+        }
+    }
+}
+.card-hut{
+    h2{
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: $blue-color;
+    }
+}
+.card {
+    img{
+        width: 100%;
+        height: 170px;
+        // transition: 0.3;
+        // filter: grayscale(100);
+        // &:hover{
+        //     filter: grayscale(0);
+        // }
+        
+    }
+    .card.title{
+        font-size: 18px;
+        font-weight: bold;
+    
+    }
+    .card-text{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 14px;
+    }
+    .float-left >button{
+        color: #eee !important;
+        background-color: $blue-color ;
+        border-color: transparent !important;
+        box-shadow: none;
+        &:hover
+        {
+            color: #000 !important;
+            background-color: #eee !important;
+            border-color: transparent !important;
+        }
+    }
+    .float-right{
+        .price{
+            font-weight: bold;
+            color: #000;
+        }
+    }
+}
+
+
+.special-offers  {
+    h3{
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: $blue-color;
+    }
+    .card {
+        height: 309px;
+        padding: 10px;
+    }
+
+
+    .overlay_1{
+        position: absolute;
+        background-color: rgba(83, 204, 215, 0.3);
+        height: 94%;
+        width: calc(100% - 19px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.2s .1s ease;   
+        
+        &:hover{
+            opacity: 1;      
+        }
+        .svg-inline--fa {
+            background-color: gold;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            &:hover{
+                background-color: #555;
+            }
+        }
+    }
+    .sale{
+        padding: 5px 10px;
+        position: absolute;
+        left: 16px;
+        top: 14px;
+        direction: ltr;
+        background-color: #53ccd7;
+        font-weight: 700;
+        color: #fff;
+    }
+
+}
+footer {
+    background-color:#1f1e1e;
+    text-align: center;
+    h2{
+        color:$blue-color;
+        margin-bottom: 15px;
+    }
+    .footer-link{
+        padding: 0 10px;
+        .link{
+            text-decoration: none;
+            margin-left: 16px;
+            margin-bottom: 20px;
+            color: #555;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .end{
+        background-color: #151515;
+        padding-top: 30px;
+        padding-bottom: 45px;
+        padding-right: 10px;
+        text-align: center;
+        justify-content: center;
+        .float-right{
+            color: #303030;
+            font-weight: bold;
+        }
+        .float-left {
+            a{
+                margin-left: 10px;
+                color: #eee;
+                &:hover,
+                &:focus{
+                    color: $blue-color ;
+                }
+            }
+        }
+    }
+    
+}
+
+@media(max-width: 991px){
+    
+        .navbar{
+            padding: 0px 20px !important;
+            .navbar-nav{
+                a {
+                    border-bottom: none !important;
+                    padding-right: 5px;
+                    margin-bottom: 7px;
+                }
+            }
+        }
+        .carosel {
+            h4{
+                font-size: 30px !important;
+            }
+            p{
+                font-size: 20px !important;
+                
+            }
+        }
+    .end{
+        .float-left {
+            float: right!important;
+            margin-top: 22px;
+        }
+        
+    }
+}
+
+
+
